@@ -35,7 +35,7 @@ CREATE TABLE pass_card.table_passing_by_card(  -- таблица студент�
     date DATE NULL,               -- дата входа в общежитие
     num_enter INT DEFAULT NULL,   -- число входов
     num_exit INT DEFAULT 0,       -- число выходов
-    FOREIGN KEY (student_id) REFERENCES pass_card.table_student(id)
+    FOREIGN KEY (student_id) REFERENCES pass_card.table_student(fio_id)
 );
 
 INSERT INTO pass_card.table_person (first_name, last_name, patronymic, birthday) VALUES
@@ -78,4 +78,91 @@ VALUES (
         '2024-10-23',
         5,
         7
-       )
+       ),
+        ((SELECT id
+         FROM pass_card.table_student
+         WHERE pass_card.table_student.id = 2),
+        '2023-02-23',
+        5,
+        7
+       );
+
+
+
+/* входили в заданную дату */
+SELECT  pass_card.table_person.first_name
+    FROM pass_card.table_passing_by_card
+        JOIN table_person ON  table_passing_by_card.student_id = table_person.id
+WHERE table_passing_by_card.date = '2023-02-23'
+AND table_passing_by_card.num_enter - table_passing_by_card.num_exit < 0;
+
+/* ни разу не входили или ни разу не выходили
+SELECT  dormitory.person.first_name,
+        dormitory.person.last_name,
+       dormitory.person.patronymic,
+       dormitory.report.action_id
+FROM dormitory.person
+LEFT JOIN dormitory.report
+     ON dormitory.report.person_id=dormitory.person.id
+WHERE   dormitory.report.person_id IS NULL;
+
+
+SELECT *
+FROM dormitory.person
+WHERE NOT EXISTS(
+    SELECT dormitory.person.first_name,
+           dormitory.person.last_name,
+           dormitory.person.patronymic,
+     dormitory.report.action_id
+    FROM dormitory.report
+    WHERE dormitory.report.person_id=dormitory.person.id
+);
+*/
+
+/*кто ни разу не входил и ни разу не выходил
+SELECT  dormitory.person.first_name,
+        dormitory.person.last_name,
+       dormitory.person.patronymic,
+       dormitory.report.day,
+       dormitory.report.time
+FROM dormitory.report
+RIGHT JOIN dormitory.person
+     ON dormitory.report.person_id=dormitory.person.id
+WHERE   dormitory.report.day IS NULL;
+*/
+
+/*никогда не входил в определенную дату
+SELECT dormitory.person.first_name,
+        dormitory.person.last_name,
+        dormitory.person.patronymic
+FROM dormitory.person
+EXCEPT
+SELECT  dormitory.person.first_name,
+        dormitory.person.last_name,
+        dormitory.person.patronymic
+FROM dormitory.report
+JOIN dormitory.person
+     ON dormitory.report.person_id=dormitory.person.id
+JOIN dormitory.action
+        ON dormitory.report.action_id=dormitory.action.id
+WHERE  dormitory.report.day='13.09.2024'
+AND  dormitory.report.action_id=1;
+*/
+
+/*никогда не выходил в определенную дату
+SELECT dormitory.person.first_name,
+        dormitory.person.last_name,
+        dormitory.person.patronymic
+FROM dormitory.person
+EXCEPT
+SELECT  dormitory.person.first_name,
+        dormitory.person.last_name,
+        dormitory.person.patronymic
+FROM dormitory.report
+JOIN dormitory.person
+     ON dormitory.report.person_id=dormitory.person.id
+JOIN dormitory.action
+        ON dormitory.report.action_id=dormitory.action.id
+WHERE  dormitory.report.day='13.09.2024'
+AND  dormitory.report.action_id=2;
+*/
