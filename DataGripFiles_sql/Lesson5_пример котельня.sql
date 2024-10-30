@@ -50,24 +50,25 @@ SELECT boiler.data,
        boiler.temperature_boiler
 FROM boiler WHERE boiler.temperature_boiler = (SELECT MAX(temperature_boiler)
    FROM boiler);
-
+--усреднённые показания температуры на улице и температуры теплоносителя разбитые по дням
 SELECT data,
-       AVG(temperature_weather) AS Средняя_температура_бойлера,
-       AVG(temperature_boiler) AS Avarage_temperature_outdoor
+       AVG(temperature_weather) AS Средняя_температура_уличная,
+       AVG(temperature_boiler) AS Средняя_температура_котельная
 FROM boiler
 GROUP BY data
 ORDER BY data;
-
+-- максимальные температуры по датам
 SELECT boiler.data,
        boiler.time,
        boiler.temperature_boiler
 FROM boiler WHERE boiler.temperature_boiler = (SELECT MAX(temperature_boiler)
-   FROM boiler WHERE data BETWEEN '2024-10-24' AND '2024-10-25');
+   FROM boiler WHERE data BETWEEN '2024-10-24' AND '2024-10-26');
 
 
 --Задание.
 --Создать таблицы для фамилий, имён и отчеств.
 --Создать представление для ФИО. Не забыть про ограничения для таблиц
+
 DROP TABLE table_person CASCADE;
 CREATE TABLE  first_name (
     id SERIAL NOT NULL PRIMARY KEY,
