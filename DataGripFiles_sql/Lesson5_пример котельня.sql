@@ -50,6 +50,7 @@ SELECT boiler.data,
        boiler.temperature_boiler
 FROM boiler WHERE boiler.temperature_boiler = (SELECT MAX(temperature_boiler)
    FROM boiler);
+
 --усреднённые показания температуры на улице и температуры теплоносителя разбитые по дням
 SELECT data,
        AVG(temperature_weather) AS Средняя_температура_уличная,
@@ -57,57 +58,12 @@ SELECT data,
 FROM boiler
 GROUP BY data
 ORDER BY data;
--- максимальные температуры по датам
+
+-- максимальна температура и время из диапазона дат
 SELECT boiler.data,
        boiler.time,
        boiler.temperature_boiler
 FROM boiler WHERE boiler.temperature_boiler = (SELECT MAX(temperature_boiler)
-   FROM boiler WHERE data BETWEEN '2024-10-24' AND '2024-10-26');
+   FROM boiler WHERE data BETWEEN '2024-10-24' AND '2024-10-26')
+AND data BETWEEN '2024-10-24' AND '2024-10-26';
 
-
---Задание.
---Создать таблицы для фамилий, имён и отчеств.
---Создать представление для ФИО. Не забыть про ограничения для таблиц
-
-DROP TABLE table_person CASCADE;
-CREATE TABLE  first_name (
-    id SERIAL NOT NULL PRIMARY KEY,
-    name TEXT NOT NULL UNIQUE
-);
-
-CREATE TABLE  last_name (
-    id SERIAL NOT NULL PRIMARY KEY,
-    name TEXT NOT NULL UNIQUE
-);
-
-CREATE TABLE  patronymic (
-    id SERIAL NOT NULL PRIMARY KEY,
-    name TEXT NOT NULL UNIQUE
-);
-
-CREATE TABLE  table_person (
-    id SERIAL NOT NULL PRIMARY KEY,
-    name_id INTEGER NOT NULL,
-    surename_id INTEGER NOT NULL,
-    patronymic_id INTEGER NOT NULL,
-    FOREIGN KEY (name_id) REFERENCES first_name(id),
-    FOREIGN KEY (surename_id) REFERENCES last_name(id),
-    FOREIGN KEY (patronymic_id) REFERENCES patronymic(id)
-);
-
-INSERT INTO first_name (name)  VALUES ('Олег'), ('Артем'), ('Генадий');
-INSERT INTO last_name (name)   VALUES ('Иванов'), ('Петров'), ('Сидоров');
-INSERT INTO patronymic (name)   VALUES ('Петрович'), ('Алексеевич'), ('Дмитриевич');
-
-INSERT INTO table_person (name_id, surename_id, patronymic_id)
-    VALUES (1,1,1),
-           (2,2,2),
-            (3,3,3);
-
-
-CREATE VIEW view_person AS
-    SELECT CONCAT(last_name, ' ', first_name, ' ', patronymic) AS full_name
-    FROM table_person
-        JOIN last_name ON last_name.id = table_person.name_id
-        JOIN first_name ON first_name.id = table_person.surename_id
-        JOIN patronymic ON patronymic.id = table_person.patronymic_id
