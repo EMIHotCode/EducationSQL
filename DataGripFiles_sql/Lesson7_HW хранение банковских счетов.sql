@@ -52,13 +52,13 @@ CREATE TABLE table_transactions(
 --</TABLES>--
 
 --<VIEWS>--
-
+DROP VIEW view_transactions;
 CREATE VIEW view_transactions AS
-    SELECT table_banks.bank_name,
-           concat_ws('','*',substring(table_account_numbers.account_number, 15 , 4)) AS account_number,
+    SELECT table_banks.bank_name AS банк_отправитель,
+           concat_ws('','*',substring(table_account_numbers.account_number, 15 , 4)) AS account_number1,
            concat_ws(' ', table_person.first_name, table_person.surname,concat_ws('',substring(table_person.last_name, 1,1),'.')) AS sender,
-           table_banks.bank_name,
-           concat_ws('','*',substring(table_account_numbers.account_number, 15 , 4)) AS account_number,
+           table_banks.bank_name AS банк_получатель,
+           concat_ws('','*',substring(table_account_numbers.account_number, 15 , 4)) AS account_number2,
            concat_ws(' ', table_person.first_name, table_person.surname,concat_ws('',substring(table_person.last_name, 1,1),'.')) AS recipient,
            table_transactions.amount
     FROM table_transactions
@@ -101,7 +101,7 @@ JOIN table_banks AS recipient_bank ON table_transactions.recipient_id = recipien
 
 --<PROCEDURES AND FUNCTIONS>--
 
-CREATE OR REPLACE FUNCTION function_if_not_exist_account_number(
+CREATE OR REPLACE FUNCTION function_if_not_exist_account_number( -- если такого аккаунта не существует или отсутствует
     IN _account_number TEXT)
 RETURNS boolean
 LANGUAGE plpgsql
@@ -122,7 +122,7 @@ BEGIN
 END;
 $$;
 
-CREATE OR REPLACE FUNCTION function_if_not_enough_money(
+CREATE OR REPLACE FUNCTION function_if_not_enough_money(  -- если мало денег на счете
     IN _account_number TEXT, _amount REAL)
 RETURNS BOOLEAN
 LANGUAGE plpgsql

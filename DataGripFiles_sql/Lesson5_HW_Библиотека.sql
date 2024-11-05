@@ -108,15 +108,15 @@ BEGIN
     -- если date_issuance не равно null, то обновляем кол-во книг на руках у пользователя
     IF NEW.date_issuance IS NOT NULL THEN
 
-        -- Обновляем количество книг на руках у пользователя в таблице table_users_library
-        UPDATE library.table_users_library
-        SET count_books_activity = count_books_activity + 1
-        WHERE user_id = NEW.users_library_id;
+    -- Обновляем количество книг на руках у пользователя в таблице table_users_library
+    UPDATE library.table_users_library
+    SET count_books_activity = count_books_activity + 1
+    WHERE user_id = NEW.users_library_id;
 
-         -- Обновляем count_activity в таблице table_library_books
-        UPDATE library.table_library_books
-        SET count_activity = count_activity + 1
-        WHERE book_id = NEW.book_id;
+     -- Обновляем count_activity в таблице table_library_books
+    UPDATE library.table_library_books
+    SET count_activity = count_activity + 1
+    WHERE book_id = NEW.book_id;
 
     END IF;
     RETURN NEW;
