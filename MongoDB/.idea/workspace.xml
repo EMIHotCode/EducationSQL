@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2891d884-2717-4dd3-a396-e009001b5a5e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/MongoDB.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/8.0/data/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/8.0/data/.idea/data.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/8.0/data/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/8.0/data/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/8.0/data/WiredTiger" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/8.0/data/WiredTiger.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/8.0/data/WiredTiger.turtle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/8.0/data/WiredTiger.wt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/8.0/data/WiredTigerHS.wt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/8.0/data/_mdb_catalog.wt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/8.0/data/collection-0-14031500201955958727.wt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/8.0/data/collection-2-14031500201955958727.wt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/8.0/data/collection-4-14031500201955958727.wt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/8.0/data/diagnostic.data/metrics.2024-11-05T15-52-32Z-00000" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/8.0/data/diagnostic.data/metrics.2024-11-05T16-01-53Z-00000" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/8.0/data/index-1-14031500201955958727.wt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/8.0/data/index-3-14031500201955958727.wt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/8.0/data/index-5-14031500201955958727.wt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/8.0/data/index-6-14031500201955958727.wt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/8.0/data/journal/WiredTigerLog.0000000015" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/8.0/data/journal/WiredTigerPreplog.0000000001" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/8.0/data/mongod.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/8.0/data/sizeStorer.wt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/8.0/data/storage.bson" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/8.0/log/mongod.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hs_err_pid8400.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_mongoEducation/basa.js" beforeDir="false" afterPath="$PROJECT_DIR$/my_mongoEducation/basa.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_mongoEducation/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/my_mongoEducation/test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/replay_pid8400.log" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 5
+}]]></component>
+  <component name="ProjectId" id="2oWI1U8Vb1CMCwYD4ayMchsEtno" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenDatabaseViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/Admin"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mongo"
+    ]
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+</project>

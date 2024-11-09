@@ -23,6 +23,7 @@
 -- автора завести отдельную таблицу а в publicher ссылаться на него его псевдоним год издания
 CREATE  SCHEMA IF NOT EXISTS library;
 
+-- принципы соединения select veiew триггеры использование транзакций
 --Таблица персон
 CREATE TABLE IF NOT EXISTS library.table_persons(
     id SERIAL NOT NULL PRIMARY KEY,  -- уникальный идентификатор

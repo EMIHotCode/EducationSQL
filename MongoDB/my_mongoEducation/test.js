@@ -1,3 +1,5 @@
+// команды обучение взято с сайта metanit https://metanit.com/nosql/mongodb/2.3.php
+
 show collections;
 
 /*подключится к существующей базе данных или создаст новую с таким именем */
@@ -6,6 +8,10 @@ use test_db;
 show dbs;
 // показ всех коллекций в базе
 show collections;
+
+// добавление данных
+insertOne(): добавляет один документ
+insertMany(): добавляет несколько документов
 
 //"name" - ключ : "Bob" - значение
 db.test_db.insertMany([{"name": "Bob", "age": 26, "languages": ["english", "french"]},
@@ -19,7 +25,7 @@ db.test_db.find({name: "Tom", age: 28});
 db.test_db.find({name: "Tom", languages: "spanish"});
 db.test_db.find({"languages.0": "english"}); /* всех у кого english стоит на первом месте в массиве */
 
-
+load("D:/share/обучение программированию/SQL lessons/SQLrepository/MongoDB/my_mongoEducation/basa.js")  // загрузить документы из файла
 db.test_db.insertOne({"name": "Bob", "age": 28, friends: [{"name": "Tim"}, {"name": "Tom"}]})
 db.test_db.insertOne({"name": "Tim", "age": 29, friends: [{"name": "Bob"}, {"name": "Tom"}]})
 db.test_db.insertOne({"name": "Sam", "age": 31, friends: [{"name": "Tom"}]})

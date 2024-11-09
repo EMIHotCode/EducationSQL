@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "KYCKrq1Waq8=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Admin\\Downloads\\Market-master\\Market-master\\Market.Lib\\Market.Lib.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.0\\microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\npgsql\\8.0.5\\npgsql.8.0.5.nupkg.sha512"
+  ],
+  "logs": []
+}

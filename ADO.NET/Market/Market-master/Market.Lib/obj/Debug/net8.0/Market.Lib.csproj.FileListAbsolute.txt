@@ -1,0 +1,12 @@
+C:\Users\Admin\Downloads\Market-master\Market-master\Market.Lib\bin\Debug\net8.0\Market.Lib.deps.json
+C:\Users\Admin\Downloads\Market-master\Market-master\Market.Lib\bin\Debug\net8.0\Market.Lib.dll
+C:\Users\Admin\Downloads\Market-master\Market-master\Market.Lib\bin\Debug\net8.0\Market.Lib.pdb
+C:\Users\Admin\Downloads\Market-master\Market-master\Market.Lib\obj\Debug\net8.0\Market.Lib.csproj.AssemblyReference.cache
+C:\Users\Admin\Downloads\Market-master\Market-master\Market.Lib\obj\Debug\net8.0\Market.Lib.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\Downloads\Market-master\Market-master\Market.Lib\obj\Debug\net8.0\Market.Lib.AssemblyInfoInputs.cache
+C:\Users\Admin\Downloads\Market-master\Market-master\Market.Lib\obj\Debug\net8.0\Market.Lib.AssemblyInfo.cs
+C:\Users\Admin\Downloads\Market-master\Market-master\Market.Lib\obj\Debug\net8.0\Market.Lib.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Downloads\Market-master\Market-master\Market.Lib\obj\Debug\net8.0\Market.Lib.dll
+C:\Users\Admin\Downloads\Market-master\Market-master\Market.Lib\obj\Debug\net8.0\refint\Market.Lib.dll
+C:\Users\Admin\Downloads\Market-master\Market-master\Market.Lib\obj\Debug\net8.0\Market.Lib.pdb
+C:\Users\Admin\Downloads\Market-master\Market-master\Market.Lib\obj\Debug\net8.0\ref\Market.Lib.dll
