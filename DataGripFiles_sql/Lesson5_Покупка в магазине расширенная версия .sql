@@ -210,7 +210,7 @@ CREATE SCHEMA log; -- создаем схему
 
 CREATE TYPE dml_type AS ENUM ('INSERT', 'UPDATE', 'DELETE');
 CREATE TABLE log.table_dml_logs (  -- создаем таблицу
-    id BIGSERIAL NOT NULL PRIMARY KEY,  -- записей много
+    id BIGSERIAL NOT NULL PRIMARY KEY,  -- записей много будет по первичному ключу
     schema_name TEXT NOT NULL,          -- имя схемы (т.е. в какой схеме происходили записи тестовая или боевая)
     table_name TEXT NOT NULL,        -- таблица в которой мы производим действия
     old_row_data jsonb,              -- старые данные которые будут храниться

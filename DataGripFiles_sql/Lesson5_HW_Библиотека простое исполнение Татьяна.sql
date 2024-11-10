@@ -20,6 +20,7 @@ CREATE TABLE library.table_book_condition (
     id SERIAL NOT NULL  PRIMARY KEY ,
     condition TEXT NOT NULL
 );
+
 CREATE TABLE library.table_books (
     id SERIAL NOT NULL PRIMARY KEY ,
     book_name TEXT NOT NULL ,

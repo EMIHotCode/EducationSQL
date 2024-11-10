@@ -24,86 +24,241 @@
 CREATE  SCHEMA IF NOT EXISTS library;
 
 -- принципы соединения select veiew триггеры использование транзакций
+
 --Таблица персон
-CREATE TABLE IF NOT EXISTS library.table_persons(
-    id SERIAL NOT NULL PRIMARY KEY,  -- уникальный идентификатор
-    surname VARCHAR(255) NOT NULL,   -- фамилия
-    name VARCHAR(255) NOT NULL,      -- имя
-    patronymic VARCHAR(255)          -- отчество
+CREATE TABLE IF NOT EXISTS table_persons(
+    id SERIAL NOT NULL PRIMARY KEY,
+    surname TEXT NOT NULL,   -- фамилия
+    name TEXT NOT NULL,      -- имя
+    patronymic TEXT          -- отчество
 );
 
--- Таблица пользователей
-CREATE TABLE IF NOT EXISTS library.table_users(
-    person_id INTEGER NOT NULL PRIMARY KEY ,      -- id персоны
-    login VARCHAR(255) NOT NULL UNIQUE,             -- логин
-    phone VARCHAR(255) NOT NULL,                    -- телефон
-    email VARCHAR(255) NOT NULL,                    -- email
-    FOREIGN KEY (person_id) REFERENCES library.table_persons(id)
+-- Таблица авторов отсутствует, привязка к table_persons
+-- CREATE TABLE table_authors(
+--    author_id INTEGER NOT NULL primary key ,
+--    FOREIGN KEY (author_id) REFERENCES table_persons(id)
+-- );
+
+-- Таблица пользователей библиотеки
+CREATE TABLE IF NOT EXISTS table_users(
+    person_id INTEGER NOT NULL PRIMARY KEY ,
+    phone TEXT NOT NULL,                                 -- телефон
+    email TEXT NOT NULL,                                 -- email
+    count_books_take INTEGER NOT NULL DEFAULT 0,         -- кол-во книг на руках у пользователя
+    is_active_user BOOLEAN NOT NULL DEFAULT FALSE,       -- активен ли пользователь
+    check ( count_books_take >= 0 ),                 -- проверка кол-ва книг на руках
+    FOREIGN KEY (person_id) REFERENCES table_persons(id)
 );
 
---Таблица издательств
-CREATE TABLE IF NOT EXISTS library.table_publishers(
-    id SERIAL NOT NULL PRIMARY KEY,       -- уникальный идентификатор
-    name VARCHAR(255) NOT NULL UNIQUE     -- название издательства
+-- Таблица издательств
+CREATE TABLE IF NOT EXISTS table_publishers(
+    id SERIAL NOT NULL PRIMARY KEY,
+    name TEXT NOT NULL UNIQUE     -- название издательства
 );
 
 -- Таблица состояний книг
-CREATE TABLE IF NOT EXISTS library.table_conditions(
+CREATE TABLE IF NOT EXISTS table_conditions(
     id SERIAL NOT NULL PRIMARY KEY,   -- уникальный идентификатор
-    name VARCHAR(255) NOT NULL UNIQUE -- название состояния книги
+    name TEXT NOT NULL UNIQUE         -- название состояния книги
 );
 
 -- Таблица книг
-CREATE TABLE IF NOT EXISTS library.table_books(
-    id SERIAL NOT NULL PRIMARY KEY, -- уникальный идентификатор
-    title VARCHAR(255) NOT NULL,    -- название книги
-    author VARCHAR(255) NOT NULL,   -- автор
-    year INTEGER NOT NULL,          -- год издания
-    publisher_id INTEGER NOT NULL,  -- идентификатор издательства
-    condition_id INTEGER NOT NULL,  -- идентификатор состояния книги
-    quantity INTEGER NOT NULL DEFAULT 1, -- кол-во экземпляров книги
-    CHECK (year > 0),
-    CHECK ( quantity > 0 ),
-    FOREIGN KEY(condition_id) REFERENCES library.table_conditions(id),
-    FOREIGN KEY (publisher_id) REFERENCES library.table_publishers(id)
+CREATE TABLE IF NOT EXISTS table_books(
+    id SERIAL NOT NULL PRIMARY KEY,
+    title TEXT NOT NULL,                                        -- название книги
+    author_id INT NOT NULL,                                     -- автор
+    year INTEGER NOT NULL CHECK (year > 0),                     -- год издания
+    publisher_id INTEGER NOT NULL,                              -- идентификатор издательства
+    condition_id INTEGER NOT NULL,                              -- идентификатор состояния книги
+    FOREIGN KEY(condition_id) REFERENCES table_conditions(id),
+    FOREIGN KEY (publisher_id) REFERENCES table_publishers(id),
+    FOREIGN KEY (author_id) REFERENCES table_persons(id)
 );
 
---Общая таблица всех пользователей библиотеки                -- убрать таблицу она не нужна без нее расширение
-CREATE TABLE IF NOT EXISTS library.table_users_library(
-    user_id INTEGER NOT NULL PRIMARY KEY,              -- id пользователя
-    count_books_activity INTEGER NOT NULL DEFAULT 0,     -- кол-во книг на руках у пользователя
-    is_active_user BOOLEAN NOT NULL DEFAULT FALSE,       -- активен ли пользователь
-    check ( count_books_activity >= 0 ),                 -- проверка кол-ва книг на руках
-    FOREIGN KEY (user_id) REFERENCES library.table_users(person_id)
-);
 
--- Общая таблица всех книг в библиотеке
-CREATE TABLE IF NOT EXISTS library.table_library_books(
+-- Таблица наличия и количества всех книг в библиотеке - картотека
+CREATE TABLE IF NOT EXISTS table_library_books(
     book_id INTEGER NOT NULL PRIMARY KEY,           -- идентификатор книги
-    balance_book INTEGER NOT NULL ,                 -- кол-во книг в библиотеке
+    quantity INTEGER NOT NULL ,                     -- кол-во экземпляров книги в библиотеке
     count_activity INTEGER NOT NULL DEFAULT 0,      -- кол-во книг на руках
-    count_book_issuance INTEGER NOT NULL DEFAULT 0, -- общее кол-во раз сколько книгу брали пользователи
+    count_book_take INTEGER NOT NULL DEFAULT 0,     -- общее кол-во раз сколько книгу брали пользователи
     check ( count_activity >= 0 ),                  -- проверка кол-ва книг на руках
-    check ( count_book_issuance >= 0 ),             -- проверка кол-ва книг на руках
-    check ( balance_book >= 0 ),                        -- проверка кол-ва книг в библиотеке
-    FOREIGN KEY (book_id) REFERENCES library.table_books(id) -- идентификатор книги
+    check ( count_book_take >= 0 ),                 -- проверка кол-ва книг на руках
+    check ( quantity >= 0 ),                        -- проверка кол-ва книг в библиотеке
+    FOREIGN KEY (book_id) REFERENCES table_books(id) -- идентификатор книги
 );
 
---Таблица выдачи книг и приема книг
-CREATE TABLE IF NOT EXISTS library.table_issuance_return_books(
+--Таблица выдачи и приема книг
+CREATE TABLE IF NOT EXISTS table_take_return_books(
     id SERIAL NOT NULL PRIMARY KEY,          -- уникальный идентификатор
-    users_library_id  INTEGER NOT NULL,      -- идентификатор пользователя
+    users_id  INTEGER NOT NULL,              -- идентификатор пользователя
     book_id INTEGER NOT NULL,                -- идентификатор книги
-    date_issuance DATE,                      -- дата выдачи книги
+    date_take DATE,                          -- дата выдачи книги
     date_return DATE,                        -- дата возврата книги
-    CHECK ( DATE(date_issuance) <= DATE(date_return) ),
-    CHECK ( date_issuance IS NOT NULL OR date_return IS NOT NULL),
-    FOREIGN KEY (users_library_id) REFERENCES library.table_users_library(user_id),
-    FOREIGN KEY (book_id) REFERENCES library.table_books(id)
+    CHECK ( DATE(date_take) <= DATE(date_return) ),
+    CHECK ( date_take IS NOT NULL OR date_return IS NOT NULL),
+    FOREIGN KEY (users_id) REFERENCES table_users(person_id),
+    FOREIGN KEY (book_id) REFERENCES table_books(id)
 );
+
+-- DROP SCHEMA public CASCADE;
+-- CREATE SCHEMA public;
+
+
+
+INSERT INTO table_persons(surname, name, patronymic)
+VALUES ('Алексеев','Сергей','Александрович'),
+       ('Зюзин','Владимир','Анатольевич'),
+       ('Зайцев','Сергей','Юрьевич'),
+       ('Ваганов','Николай','Александрович'),
+       ('Малов','Андрей','Анатольевич'),
+
+       ('Лукьяненко','Сергей',''),  --6
+       ('Чехов','Антон','Павлович'),
+       ('Лесков','Николай','Семенович'),
+       ('По','Эдгар Алан',''),
+       ('Пушкин','Александр','Сергеевич'),
+       ('Бунин','Иван','Алексеевич');
+
+INSERT INTO table_users(person_id, phone, email, count_books_take, is_active_user)
+VALUES ((SELECT id FROM table_persons
+                   WHERE surname='Алексеев'
+                   AND name='Сергей'
+                   AND patronymic='Александрович'),'222-22-22','alex_alex@yand', 1, true),
+    (2,'333-34-34', 'testmail@mail',0, false),
+    (3, '444-54-54', 'testmail2@sergey', 3,true),
+    (4,'123-123-23','test3@vagan',2, true),
+    (5,'777-54-56', 'testmail5@malov', 0,false);
+
+INSERT INTO table_publishers(name)
+VALUES ('Дрофа'),
+       ('Литрес'),
+       ('Эксмо'),
+       ('Лабиринт'),
+       ('Просвещение');
+
+INSERT INTO table_conditions(name)
+VALUES ('новая'),
+       ('хорошее состояние'),
+       ('плохое состояние'),
+       ('ветхая');
+
+INSERT INTO table_books(title, author_id, year, publisher_id, condition_id)
+VALUES ('Трикс',
+        (SELECT id FROM table_persons
+                   WHERE surname='Лукьяненко'
+                   AND name='Сергей'),1998,2,2),
+    ('Золотой жук', 9,1843,4,3),
+    ('Евгений онегин', 10,1823,5,4),
+    ('Рыцари сорока островов', 6,2001,1,1),
+    ('Вишневый сад', 7,1903,3,4),
+    ('Левша', 8,1881,4,1),
+    ('Темные аллеи', 11,1891,2,2);
+
+INSERT INTO table_library_books(book_id, quantity, count_activity, count_book_take)
+VALUES (1, 5, 2, 125),
+       (2, 2, 1, 35),
+       (3, 3, 0, 47),
+       (4, 4, 1, 25),
+       (5, 1, 0, 110),
+       (6, 2, 1, 77),
+       (7, 6, 1, 67);
+
+INSERT INTO table_take_return_books(users_id, book_id, date_take, date_return)
+VALUES (1, 1, '05.09.2024',NULL),
+       (3, 1, '05.09.2024','25.09.2024'),
+       (3, 4, '07.09.2024','22.09.2024'),
+       (3, 6, '05.09.2024','05.09.2024'),
+       (4, 2, '15.09.2024','18.09.2024'),
+       (4, 7, '17.09.2024',NULL);
+
+
+-- <SELECT>
+
+/*ни разу не брал книгу */
+SELECT  CONCAT_WS(' ',surname, name, patronymic)
+    FROM table_users
+    JOIN table_persons
+    ON table_users.person_id=table_persons.id
+EXCEPT
+SELECT  CONCAT_WS(' ',surname,name, patronymic)
+    FROM table_take_return_books
+JOIN table_persons
+ON table_take_return_books.book_id=table_persons.id;
+
+-- </SELECT>
+
+
+
+-- <LOG>
+CREATE SCHEMA log; -- создаем схему
+
+CREATE TYPE dml_type AS ENUM ('INSERT', 'UPDATE', 'DELETE');
+CREATE TABLE log.table_dml_logs (  -- создаем таблицу
+    id BIGSERIAL NOT NULL PRIMARY KEY,
+    schema_name TEXT NOT NULL,          -- имя схемы (т.е. в какой схеме происходили записи тестовая или боевая)
+    table_name TEXT NOT NULL,        -- таблица в которой мы производим действия
+    old_row_data jsonb,              -- старые данные которые будут храниться
+    new_row_data jsonb,              -- какие новые данные
+    dml_type dml_type NOT NULL,      -- тип события из ENUM который будет происходить
+    dml_timestamp TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,  -- когда произошло событие
+    dml_user_name TEXT NOT NULL DEFAULT CURRENT_USER      --  кем было сделано имя юзера который произвел действие (изменения в таблице)
+);
+CREATE OR REPLACE PROCEDURE log.procedure_insert_log( -- это хранимая процедура, которая поможет записывать в таблицу table_dml_logs действия
+    IN _schema_name TEXT,  -- входящие данные имя схемы
+    IN _table_name TEXT,   -- входящие данные имя таблицы
+    IN _old_row_data jsonb, -- входящие данные старые данные
+    IN _new_row_data jsonb, -- входящие данные новые данные
+    IN _dml_type dml_type)  -- входящие данные dml тип
+LANGUAGE SQL  -- на каком языке будем писать запрос
+BEGIN ATOMIC
+    INSERT INTO log.table_dml_logs (schema_name, table_name, old_row_data, new_row_data, dml_type)
+    VALUES (_schema_name, _table_name, _old_row_data, _new_row_data, _dml_type);
+END;
+
+-- BEGIN ATOMIC   END;
+-- AS $$          $$; альтернатива
+
+CREATE OR REPLACE FUNCTION log.function_dml_log()
+    RETURNS trigger  -- функция возвращает триггер
+LANGUAGE plpgsql AS
+$$
+BEGIN
+    IF (tg_op = 'INSERT') THEN  -- tg_op зарезервированная переменная, в ней храниться тип операции, которая вызвала триггер
+        -- CALL вызываем функцию
+        CALL log.procedure_insert_log(tg_table_schema, tg_table_name, NULL, to_jsonb(NEW), 'INSERT');  --jsonb бинарный вид
+        RETURN NEW;  -- чтобы вернула триггер
+    ELSEIF (tg_op = 'UPDATE') THEN
+        CALL log.procedure_insert_log(tg_table_schema, tg_table_name, to_jsonb(OLD), to_jsonb(NEW), 'UPDATE');
+        RETURN NEW;
+    ELSEIF (tg_op = 'DELETE') THEN
+        CALL log.procedure_insert_log(tg_table_schema, tg_table_name, to_jsonb(OLD), NULL, 'DELETE');
+        RETURN OLD;
+    END IF;
+END;
+$$;
+-- </LOG>
+
+-- <TRIGGERS> - это недофункция которые срабатывают при определенных событиях и вызывают какую то функцию
+-- триггер пишется для каждой таблицы свой
+CREATE TRIGGER trigger_dml_log_for_table_products --trigger_dml_log комманды манипуляции dml для логирования  для таблицы for_table_products
+AFTER INSERT OR UPDATE OR DELETE
+    ON table_products
+    FOR EACH ROW -- для каждой строчки будет срабатывать триггер
+EXECUTE FUNCTION log.function_dml_log();  -- что мы будем выполнять
+
+CREATE TRIGGER trigger_dml_log_for_table_baskets
+AFTER INSERT OR UPDATE OR DELETE
+    ON table_baskets
+    FOR EACH ROW
+EXECUTE FUNCTION log.function_dml_log();
+
+-- </TRIGGERS
+
+
 
 -- Функция для инкремента кол-ва книг на руках у пользователя
-CREATE OR REPLACE FUNCTION library.increment_count_books_activity()
+CREATE OR REPLACE FUNCTION increment_count_books_activity()
 RETURNS TRIGGER AS $$
 BEGIN
     -- если date_issuance не равно null, то обновляем кол-во книг на руках у пользователя
