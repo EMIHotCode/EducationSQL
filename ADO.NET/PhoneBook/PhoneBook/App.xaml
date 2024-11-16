@@ -1,0 +1,13 @@
+﻿<!-- класс App.xaml нужен для того чтобы иметь какие то общие для всех окон приложения ресурсы действия и др.-->      
+<Application x:Class="PhoneBook.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             
+             xmlns:sys="clr-namespace:System;assembly=mscorlib" 
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <!-- xmlns:sys="clr-namespace:System;assembly=mscorlib" - это пространство имен написано вручную для создания строковой переменной--> 
+        <!-- строковой переменной <sys:String x:Key="Title">Телефонная книга</sys:String> название приложеня Телефонная книга--> 
+        <sys:String x:Key="Title">Телефонная книга</sys:String>
+    </Application.Resources>
+</Application>

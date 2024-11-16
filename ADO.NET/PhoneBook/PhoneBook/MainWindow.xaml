@@ -1,0 +1,18 @@
+﻿<Window x:Class="PhoneBook.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+
+        Title="{StaticResource Title}" Height="450" Width="800"
+        DataContext = "{Binding RelativeSource={RelativeSource Self}}">
+    <!--Title="MainWindow" заменили Title="{StaticResource Title}" из файла App.xaml-->
+
+    <Grid>
+        <DataGrid x:Name="DataGrid" 
+                  AutoGenerateColumns="False"
+                  ItemsSource="{Binding UserPhones}">
+            <DataGrid.Columns>
+                <Da
+            </DataGrid.Columns>
+        </DataGrid> 
+    </Grid>
+</Window>

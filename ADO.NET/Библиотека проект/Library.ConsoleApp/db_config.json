@@ -1,8 +1,8 @@
 ﻿{
   "server": "localhost",
   "port": 5432,
-  "database": "market_db",
+  "database": "library_db",
   "user": "postgres",
   "password": "1234",
-  "schema": "test"
+  "schema": "public"
 }

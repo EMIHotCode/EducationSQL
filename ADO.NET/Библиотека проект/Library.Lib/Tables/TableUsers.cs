@@ -14,9 +14,9 @@ public class TableUsers : BaseTable, ISelect<User>
             Connection.Open();
 
             const string sql = """
-                               SELECT id, user_name,
-                                      last_name, first_name, patronymic
-                               FROM view_users
+                               SELECT person_id, phone,
+                                      email, count_books_take, is_active_user
+                               FROM table_users
                                """;
             /*using var command = new NpgsqlCommand(sql, Connection);
             var reader = command.ExecuteReader();
@@ -43,12 +43,12 @@ public class TableUsers : BaseTable, ISelect<User>
         Connection.Open();
 
         const string sql = """
-                           SELECT id, user_name,
-                                  last_name, first_name, patronymic
-                           FROM view_users
-                           WHERE id = @id
+                           SELECT person_id, phone,
+                           email, count_books_take, is_active_user
+                           FROM table_users
+                           WHERE person_id = @id
                            """;
-        var user = Connection.QuerySingleOrDefault<User>(sql, new { id });
+        var user = Connection.QuerySingleOrDefault<User>(sql, new { id });// dapper
         
         Connection.Close();
         return user;
