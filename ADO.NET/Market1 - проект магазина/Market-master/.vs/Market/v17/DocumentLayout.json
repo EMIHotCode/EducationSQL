@@ -1,0 +1,89 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\share\\\u043E\u0431\u0443\u0447\u0435\u043D\u0438\u0435 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u044E\\SQL lessons\\SQLrepository\\ADO.NET\\Market1 - \u043F\u0440\u043E\u0435\u043A\u0442 \u043C\u0430\u0433\u0430\u0437\u0438\u043D\u0430\\Market-master\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{94ED1C2F-F993-4C16-BC63-8720BFA73553}|Market.Lib\\Market.Lib.csproj|d:\\share\\\u043E\u0431\u0443\u0447\u0435\u043D\u0438\u0435 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u044E\\sql lessons\\sqlrepository\\ado.net\\market1 - \u043F\u0440\u043E\u0435\u043A\u0442 \u043C\u0430\u0433\u0430\u0437\u0438\u043D\u0430\\market-master\\market.lib\\tableusers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94ED1C2F-F993-4C16-BC63-8720BFA73553}|Market.Lib\\Market.Lib.csproj|solutionrelative:market.lib\\tableusers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94ED1C2F-F993-4C16-BC63-8720BFA73553}|Market.Lib\\Market.Lib.csproj|d:\\share\\\u043E\u0431\u0443\u0447\u0435\u043D\u0438\u0435 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u044E\\sql lessons\\sqlrepository\\ado.net\\market1 - \u043F\u0440\u043E\u0435\u043A\u0442 \u043C\u0430\u0433\u0430\u0437\u0438\u043D\u0430\\market-master\\market.lib\\tablepersons.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94ED1C2F-F993-4C16-BC63-8720BFA73553}|Market.Lib\\Market.Lib.csproj|solutionrelative:market.lib\\tablepersons.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9676321F-B1E8-43B7-8DB0-BA3EDA442F08}|Market.ConsoleApp\\Market.ConsoleApp.csproj|d:\\share\\\u043E\u0431\u0443\u0447\u0435\u043D\u0438\u0435 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u044E\\sql lessons\\sqlrepository\\ado.net\\market1 - \u043F\u0440\u043E\u0435\u043A\u0442 \u043C\u0430\u0433\u0430\u0437\u0438\u043D\u0430\\market-master\\market.consoleapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9676321F-B1E8-43B7-8DB0-BA3EDA442F08}|Market.ConsoleApp\\Market.ConsoleApp.csproj|solutionrelative:market.consoleapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TableUsers.cs",
+              "DocumentMoniker": "D:\\share\\\u043E\u0431\u0443\u0447\u0435\u043D\u0438\u0435 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u044E\\SQL lessons\\SQLrepository\\ADO.NET\\Market1 - \u043F\u0440\u043E\u0435\u043A\u0442 \u043C\u0430\u0433\u0430\u0437\u0438\u043D\u0430\\Market-master\\Market.Lib\\TableUsers.cs",
+              "RelativeDocumentMoniker": "Market.Lib\\TableUsers.cs",
+              "ToolTip": "D:\\share\\\u043E\u0431\u0443\u0447\u0435\u043D\u0438\u0435 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u044E\\SQL lessons\\SQLrepository\\ADO.NET\\Market1 - \u043F\u0440\u043E\u0435\u043A\u0442 \u043C\u0430\u0433\u0430\u0437\u0438\u043D\u0430\\Market-master\\Market.Lib\\TableUsers.cs",
+              "RelativeToolTip": "Market.Lib\\TableUsers.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T21:35:30.662Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TablePersons.cs",
+              "DocumentMoniker": "D:\\share\\\u043E\u0431\u0443\u0447\u0435\u043D\u0438\u0435 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u044E\\SQL lessons\\SQLrepository\\ADO.NET\\Market1 - \u043F\u0440\u043E\u0435\u043A\u0442 \u043C\u0430\u0433\u0430\u0437\u0438\u043D\u0430\\Market-master\\Market.Lib\\TablePersons.cs",
+              "RelativeDocumentMoniker": "Market.Lib\\TablePersons.cs",
+              "ToolTip": "D:\\share\\\u043E\u0431\u0443\u0447\u0435\u043D\u0438\u0435 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u044E\\SQL lessons\\SQLrepository\\ADO.NET\\Market1 - \u043F\u0440\u043E\u0435\u043A\u0442 \u043C\u0430\u0433\u0430\u0437\u0438\u043D\u0430\\Market-master\\Market.Lib\\TablePersons.cs",
+              "RelativeToolTip": "Market.Lib\\TablePersons.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAgwCAAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T21:33:14.986Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\share\\\u043E\u0431\u0443\u0447\u0435\u043D\u0438\u0435 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u044E\\SQL lessons\\SQLrepository\\ADO.NET\\Market1 - \u043F\u0440\u043E\u0435\u043A\u0442 \u043C\u0430\u0433\u0430\u0437\u0438\u043D\u0430\\Market-master\\Market.ConsoleApp\\Program.cs",
+              "RelativeDocumentMoniker": "Market.ConsoleApp\\Program.cs",
+              "ToolTip": "D:\\share\\\u043E\u0431\u0443\u0447\u0435\u043D\u0438\u0435 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u044E\\SQL lessons\\SQLrepository\\ADO.NET\\Market1 - \u043F\u0440\u043E\u0435\u043A\u0442 \u043C\u0430\u0433\u0430\u0437\u0438\u043D\u0430\\Market-master\\Market.ConsoleApp\\Program.cs",
+              "RelativeToolTip": "Market.ConsoleApp\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T21:32:18.86Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 431,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -214,11 +214,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin\\Downloads\\Market-master\\Market-master\\Market.ConsoleApp\\Market.ConsoleApp.csproj",
+      "projectUniqueName": "D:\\share\\обучение программированию\\SQL lessons\\SQLrepository\\ADO.NET\\Market1 - проект магазина\\Market-master\\Market.ConsoleApp\\Market.ConsoleApp.csproj",
       "projectName": "Market.ConsoleApp",
-      "projectPath": "C:\\Users\\Admin\\Downloads\\Market-master\\Market-master\\Market.ConsoleApp\\Market.ConsoleApp.csproj",
+      "projectPath": "D:\\share\\обучение программированию\\SQL lessons\\SQLrepository\\ADO.NET\\Market1 - проект магазина\\Market-master\\Market.ConsoleApp\\Market.ConsoleApp.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Admin\\Downloads\\Market-master\\Market-master\\Market.ConsoleApp\\obj\\",
+      "outputPath": "D:\\share\\обучение программированию\\SQL lessons\\SQLrepository\\ADO.NET\\Market1 - проект магазина\\Market-master\\Market.ConsoleApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -236,8 +236,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\Admin\\Downloads\\Market-master\\Market-master\\Market.Lib\\Market.Lib.csproj": {
-              "projectPath": "C:\\Users\\Admin\\Downloads\\Market-master\\Market-master\\Market.Lib\\Market.Lib.csproj"
+            "D:\\share\\обучение программированию\\SQL lessons\\SQLrepository\\ADO.NET\\Market1 - проект магазина\\Market-master\\Market.Lib\\Market.Lib.csproj": {
+              "projectPath": "D:\\share\\обучение программированию\\SQL lessons\\SQLrepository\\ADO.NET\\Market1 - проект магазина\\Market-master\\Market.Lib\\Market.Lib.csproj"
             }
           }
         }

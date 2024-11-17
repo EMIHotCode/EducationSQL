@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Market.Lib
-build_property.ProjectDir = C:\Users\Admin\Downloads\Market-master\Market-master\Market.Lib\
+build_property.ProjectDir = D:\share\обучение программированию\SQL lessons\SQLrepository\ADO.NET\Market1 - проект магазина\Market-master\Market.Lib\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

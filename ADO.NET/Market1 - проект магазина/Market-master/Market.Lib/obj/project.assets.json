@@ -196,11 +196,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin\\Downloads\\Market-master\\Market-master\\Market.Lib\\Market.Lib.csproj",
+      "projectUniqueName": "D:\\share\\обучение программированию\\SQL lessons\\SQLrepository\\ADO.NET\\Market1 - проект магазина\\Market-master\\Market.Lib\\Market.Lib.csproj",
       "projectName": "Market.Lib",
-      "projectPath": "C:\\Users\\Admin\\Downloads\\Market-master\\Market-master\\Market.Lib\\Market.Lib.csproj",
+      "projectPath": "D:\\share\\обучение программированию\\SQL lessons\\SQLrepository\\ADO.NET\\Market1 - проект магазина\\Market-master\\Market.Lib\\Market.Lib.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Admin\\Downloads\\Market-master\\Market-master\\Market.Lib\\obj\\",
+      "outputPath": "D:\\share\\обучение программированию\\SQL lessons\\SQLrepository\\ADO.NET\\Market1 - проект магазина\\Market-master\\Market.Lib\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
