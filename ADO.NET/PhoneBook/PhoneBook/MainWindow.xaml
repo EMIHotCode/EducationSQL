@@ -4,6 +4,7 @@
 
         Title="{StaticResource Title}" Height="450" Width="800"
         DataContext = "{Binding RelativeSource={RelativeSource Self}}">
+     <!-- RelativeSource относительная ссылка на то что DataContext ссылается сам на себя тоесть на файл MainWindow.xaml -->
     <!--Title="MainWindow" заменили Title="{StaticResource Title}" из файла App.xaml-->
 
     <Grid>
@@ -11,8 +12,57 @@
                   AutoGenerateColumns="False"
                   ItemsSource="{Binding UserPhones}">
             <DataGrid.Columns>
-                <Da
+                
+                <DataGridTextColumn Header="ID" 
+                                    Binding="{Binding Id}"
+                                    IsReadOnly="True"/>  <!--привязка к элементам класса UserPhones -->
+               
+                <DataGridTextColumn Header="Имя"
+                                    IsReadOnly="True">
+                    <DataGridTextColumn.Binding>
+                        <MultiBinding StringFormat="{}{0} {1}"> <!-- помогает формировать строчку которая выйдет в результате объединения биндингов LastName и FirstName -->
+                            <Binding Path="LastName"/>
+                            <Binding Path="FirstName"/>
+                        </MultiBinding>
+                    </DataGridTextColumn.Binding>
+                </DataGridTextColumn>
+                
+                <DataGridTemplateColumn Header="Дата рождения" IsReadOnly="True"> <!-- вывод даты -->
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <DatePicker SelectedDate="{Binding DateOfBirth}"
+                                        SelectedDateFormat="Short"/>
+                             <!-- DisplayDate="{Binding DateOfBirth}" не работает выдает пустые ячейки с возможностью заполнения даты -->
+                            <!--<TextBlock Text="{Binding DateOfBirth, StringFormat='dd-MM-yyyy'}"/>   вывод даты в текстовом формате без использования DatePicker-->
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <!-- вывод даты в тектовом формате-->
+                <!--<DataGridTextColumn Header="Дата рождения"
+                                    Binding="{Binding DateOfBirth, StringFormat='dd-MM-yyyy'}"
+                                    IsReadOnly="True"/>  -->
+                
+                <DataGridTemplateColumn Header="Телефон" IsReadOnly="True"> <!-- вывод телефона можно использовать MultiBinding или Template -->
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                
+                                <TextBlock Text="{Binding PhoneType}" 
+                                           Grid.Column="0"/>
+                                <TextBlock Text="{Binding PhoneNumber}" 
+                                           Grid.Column="1"/>
+                                
+                            </Grid>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                
             </DataGrid.Columns>
         </DataGrid> 
     </Grid>
 </Window>
+<!--  -->
