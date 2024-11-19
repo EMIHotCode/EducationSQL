@@ -25,7 +25,8 @@ CREATE TABLE table_phones (
     FOREIGN KEY (user_id) REFERENCES table_users(id),
     FOREIGN KEY (phone_type_id) REFERENCES table_phone_types(id)   
 );
--- запуск добавления таблиц правой кнопкой мыши \ Execute \ для первой пустой таблици \ данные авотматически добавятся в базу с .exe файлом 
+--в новом файле .sql нет кнопки запуска запроса - она есть по нажатии правой кнопкой мыши - execute
+-- добавление таблиц правой кнопкой мыши \ Execute \ для первой пустой таблици \ данные авотматически добавятся в базу с .exe файлом 
 
 INSERT INTO table_users (first_name, last_name, date_of_birth) VALUES ('John', 'Doe', '1990-01-01'),
                                                                       ('Jane', 'Dallas', '1995-05-10');
