@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = PhoneBook
-build_property.ProjectDir = E:\обучение программированию\обучение SQL\SQLrepository\ADO.NET\PhoneBook\PhoneBook\
+build_property.ProjectDir = D:\share\обучение программированию\SQL lessons\SQLrepository\ADO.NET\PhoneBook\PhoneBook\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

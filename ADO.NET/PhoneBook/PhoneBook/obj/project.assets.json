@@ -367,19 +367,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Mr User\\.nuget\\packages\\": {}
+    "C:\\Users\\Admin\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\обучение программированию\\обучение SQL\\SQLrepository\\ADO.NET\\PhoneBook\\PhoneBook\\PhoneBook.csproj",
+      "projectUniqueName": "D:\\share\\обучение программированию\\SQL lessons\\SQLrepository\\ADO.NET\\PhoneBook\\PhoneBook\\PhoneBook.csproj",
       "projectName": "PhoneBook",
-      "projectPath": "E:\\обучение программированию\\обучение SQL\\SQLrepository\\ADO.NET\\PhoneBook\\PhoneBook\\PhoneBook.csproj",
-      "packagesPath": "C:\\Users\\Mr User\\.nuget\\packages\\",
-      "outputPath": "E:\\обучение программированию\\обучение SQL\\SQLrepository\\ADO.NET\\PhoneBook\\PhoneBook\\obj\\",
+      "projectPath": "D:\\share\\обучение программированию\\SQL lessons\\SQLrepository\\ADO.NET\\PhoneBook\\PhoneBook\\PhoneBook.csproj",
+      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+      "outputPath": "D:\\share\\обучение программированию\\SQL lessons\\SQLrepository\\ADO.NET\\PhoneBook\\PhoneBook\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Mr User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -439,7 +439,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
