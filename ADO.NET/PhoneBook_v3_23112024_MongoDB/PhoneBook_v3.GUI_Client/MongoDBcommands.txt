@@ -1,0 +1,6 @@
+﻿use phonebook_db
+
+db.phonebook_db.insertOne({"Name": "John", "Phones":[{"Type": "Mobile", "Number": "123456234"}]})
+
+db.phonebook_db.insertOne({"Name": "Ivan", "LastName": "Doe", "Phones":[{"Type": "Mobile", "Number": "123456666"}, {"Type": "Home", "Number": "0012123123", "Comment": "user 2"}]})
+db.phonebook_db.insertOne({"Name": "Petr", "LastName": "Petrov", "Patronymic": "Petrovich", "Phones":[{"Type": "Mobile", "Number": "3332222111"}, {"Type": "Work", "Number": "333000", "Comment": "some comment"}]})
