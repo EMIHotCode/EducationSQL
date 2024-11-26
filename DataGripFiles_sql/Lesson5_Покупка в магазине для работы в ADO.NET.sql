@@ -152,7 +152,10 @@ BEGIN
 END;
 $$;
 
-/*CREATE OR REPLACE PROCEDURE procedure_insert_person(
+DROP PROCEDURE procedure_insert_person;
+
+/* нерабочая пробная версия  */
+CREATE OR REPLACE PROCEDURE procedure_insert_person(
     IN _first_name TEXT,
     IN _last_name TEXT,
     IN _patronymic TEXT,
@@ -165,19 +168,48 @@ BEGIN
               FROM table_persons
               WHERE first_name = _first_name
                 AND last_name = _last_name
-                AND patronymic = _patronymic)
-           AND NOT EXISTS(SELECT *
-                          FROM table_users
-                          WHERE user_name = _user_name) THEN
+                AND patronymic = _patronymic) THEN
         INSERT INTO table_persons (first_name, last_name, patronymic)
         VALUES (_first_name, _last_name, _patronymic);
 
         INSERT INTO table_users (user_name)
         VALUES (_user_name);
-    END IF;
-END;
-$$;*/
+        COMMIT;
+       ELSE
+        ROLLBACK;
 
+    END IF;
+
+END;
+$$;
+/*
+BEGIN
+    IF NOT EXISTS(SELECT *
+              FROM table_persons
+              WHERE first_name = _first_name
+                AND last_name = _last_name
+                AND patronymic = _patronymic) THEN
+        INSERT INTO table_persons (first_name, last_name, patronymic)
+        VALUES (_first_name, _last_name, _patronymic);
+
+       IF NOT EXISTS(SELECT *
+              FROM table_users
+              WHERE user_name = _user_name) THEN
+        INSERT INTO table_users (user_name)
+        VALUES (_user_name);
+        COMMIT;
+       ELSE
+        ROLLBACK;
+
+        END IF;
+
+    END IF;
+
+END;
+
+    SAVEPOINT my_savepoint;
+    ROLLBACK TO my_savepoint;
+*/
 -- </PROCEDURES>
 
 -- <TEST DATA>

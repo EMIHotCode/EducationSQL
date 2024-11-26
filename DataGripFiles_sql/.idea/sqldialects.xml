@@ -7,10 +7,12 @@
     <file url="file://$PROJECT_DIR$/Lesson4_студенты вход и выход из общежития продолжение.sql" dialect="GenericSQL" />
     <file url="file://$PROJECT_DIR$/Lesson5_HW_Библиотека.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/Lesson5_view тренировка упражнение.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/Lesson5_Покупка в магазине для работы в ADO.NET.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/Lesson5_Покупка в магазине расширенная версия .sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/Lesson5_пример котельня.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/Lesson7_HW хранение банковских счетов.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/northwind.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/northwind_commands.sql" dialect="PostgreSQL" />
+    <file url="PROJECT" dialect="PostgreSQL" />
   </component>
 </project>
