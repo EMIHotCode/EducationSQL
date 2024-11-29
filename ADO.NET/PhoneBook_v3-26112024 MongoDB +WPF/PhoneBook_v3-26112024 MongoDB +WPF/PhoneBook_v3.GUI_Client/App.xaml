@@ -1,0 +1,11 @@
+﻿<Application x:Class="PhoneBook_v3.GUI_Client.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             
+             StartupUri="../Windows/MainWindow.xaml">
+    <Application.Resources>
+        <!--  -->
+        <sys:String x:Key="WindowTitle">Телефонная книга</sys:String> <!-- создали переменную в которую можно закидывать данные для передачи между окнами -->
+    </Application.Resources>
+</Application>

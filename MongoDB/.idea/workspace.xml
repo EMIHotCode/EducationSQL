@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2891d884-2717-4dd3-a396-e009001b5a5e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9f0e6748-1b4c-4585-8e26-f058753e8d0f.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/9f0e6748-1b4c-4585-8e26-f058753e8d0f.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ec42254b-933e-4d8d-b6c2-aa10fa9088b8.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ec42254b-933e-4d8d-b6c2-aa10fa9088b8/storage_v2/_src_/schema/EducationDB.Bs7ZVA.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_mongoEducation/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/my_mongoEducation/test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../OneNoteЗаписиSQL/Разделы обучения.one" beforeDir="false" afterPath="$PROJECT_DIR$/../OneNoteЗаписиSQL/Разделы обучения.one" afterDir="false" />
-    </list>
+    <list default="true" id="2891d884-2717-4dd3-a396-e009001b5a5e" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

@@ -1,5 +1,5 @@
 
--- CREATE DATABASE market_db;
+CREATE DATABASE test_db;
 -- CREATE SCHEMA test;
 
 
@@ -164,22 +164,12 @@ LANGUAGE plpgsql
 AS
 $$
 BEGIN
-    IF NOT EXISTS(SELECT *
-              FROM table_persons
-              WHERE first_name = _first_name
-                AND last_name = _last_name
-                AND patronymic = _patronymic) THEN
         INSERT INTO table_persons (first_name, last_name, patronymic)
         VALUES (_first_name, _last_name, _patronymic);
 
         INSERT INTO table_users (user_name)
         VALUES (_user_name);
-        COMMIT;
-       ELSE
-        ROLLBACK;
-
-    END IF;
-
+COMMIT;
 END;
 $$;
 /*
@@ -229,8 +219,15 @@ VALUES ('ivan@ivanov.ru'),
        ('petya@petrov.ru'),
        ('vasiliy@vasiliev.ru');
 
+TRUNCATE TABLE table_persons CASCADE;
+TRUNCATE TABLE table_users; /*не сбрасывает serial */
+
+SELECT pg_get_serial_sequence('table_persons', 'id');  /*показ названия последовательности для таблицы и столбца*/
+
+
+
 CALL procedure_insert_person('Иван', 'Иванов', 'Иванович', 'ivan@ivanov.ru');
-CALL procedure_insert_person('Иван', 'Иванов', 'Иванович', '1@ivanov.ru');
+CALL procedure_insert_person('Иван', 'Иванов', 'Иванович', '2@ivanov.ru');
 CALL procedure_insert_person('Иван1', 'Иванов', 'Иванович', 'ivan@ivanov.ru');
 CALL procedure_insert_person('Иван1', 'Иванов', 'Иванович', 'ivan1@ivanov.ru');
 
