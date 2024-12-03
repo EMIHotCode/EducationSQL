@@ -1,0 +1,18 @@
+﻿<!--создали свой юзер контрол -->
+<UserControl x:Class="University.Components.InputControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Name="Input">
+             <!--DataContext="{Binding RelativeSource={RelativeSource Self}}">-->
+    <Grid DataContext="{Binding ElementName=Input}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+        
+        <Label Content="{Binding Label, Mode=OneWay}"
+               Grid.Column="0"/>
+        <TextBox Text="{Binding InputText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                 Grid.Column="1"/>
+    </Grid>
+</UserControl>
