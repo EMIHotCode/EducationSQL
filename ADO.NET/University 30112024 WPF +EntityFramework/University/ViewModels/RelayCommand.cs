@@ -6,7 +6,7 @@ public class RelayCommand : ICommand
 {
     private readonly Action<object?> _execute;
     private readonly Predicate<object?> _canExecute;
-    //private readonly Func<object?, bool> _canExecute;
+    //private readonly Func<object?, bool> _canExecute; аналогично Predicate
 
     public RelayCommand(Action<object?> execute, Predicate<object?>? canExecute = null)
     {

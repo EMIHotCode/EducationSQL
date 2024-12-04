@@ -4,6 +4,7 @@ namespace University.Models;
 
 public class DataBaseContext : DbContext
 {
+    // папка Models работает с БД
     public DbSet<Faculty> Faculties { get; set; }
     public DbSet<Subject> Subjects { get; set; }
     public DbSet<Teacher> Teachers { get; set; }

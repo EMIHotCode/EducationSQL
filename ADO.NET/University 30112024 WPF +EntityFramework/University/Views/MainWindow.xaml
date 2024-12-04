@@ -7,11 +7,11 @@
         Title="MainWindow"
         
         WindowState="Maximized">
-    <Window.DataContext>
+    <Window.DataContext>  <!-- откуда берем биндинги MainWindowViewModel-->
         <vm:MainWindowViewModel/>
     </Window.DataContext>
     
-    <DockPanel LastChildFill="True">
+    <DockPanel LastChildFill="True">  <!-- LastChildFill последний элемент заполняет все оставшееся место -->
         <StackPanel Orientation="Horizontal"
                     DockPanel.Dock="Top">
             <c:InputControl Label="Поиск"

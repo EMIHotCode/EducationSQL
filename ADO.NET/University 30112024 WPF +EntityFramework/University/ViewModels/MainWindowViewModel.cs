@@ -9,9 +9,10 @@ public class MainWindowViewModel : ViewModelBase
 {
     private readonly DataBaseContext _db;
     
-    #region ObservableProperties
+    //сюда записываются все наблюдаемые свойства 
+    #region ObservableProperties  
 
-    private string? _searchText;
+    private string? _searchText; // для текста поиска input text
     public string? SearchText
     {
         get => _searchText;
@@ -34,11 +35,11 @@ public class MainWindowViewModel : ViewModelBase
             LastName = value?.LastName;
             FirstName = value?.FirstName;
             SelectedFaculty = value?.Faculty;
-            InitSubjects(value!.Subjects);
+            InitSubjects(value!.Subjects);  // ! - гарантируем что не null 
         }
     }
 
-    private string? _id;
+    private string? _id; // id string так как его выводим только на экран 
     public string? Id
     {
         get => _id; 
@@ -92,6 +93,7 @@ public class MainWindowViewModel : ViewModelBase
         
         InitTeachers(_db.Teachers);
         InitFaculties(_db.Faculties);
+        //InitSubjects(_db.Subjects);
     }
 
     #region Methods

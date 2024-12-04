@@ -29,3 +29,34 @@ D:\share\обучение программированию\SQL lessons\SQLreposi
 D:\share\обучение программированию\SQL lessons\SQLrepository\ADO.NET\universitet_mikl\universitet_mikl\obj\Debug\net9.0\universitet_mikl.pdb
 D:\share\обучение программированию\SQL lessons\SQLrepository\ADO.NET\universitet_mikl\universitet_mikl\obj\Debug\net9.0\universitet_mikl.genruntimeconfig.cache
 D:\share\обучение программированию\SQL lessons\SQLrepository\ADO.NET\universitet_mikl\universitet_mikl\obj\Debug\net9.0\ref\universitet_mikl.dll
+E:\обучение программированию\обучение SQL\EducationSQL\ADO.NET\universitet_mikl_30112024 EntityFramework пример\universitet_mikl\bin\Debug\net9.0\universitet_mikl.exe
+E:\обучение программированию\обучение SQL\EducationSQL\ADO.NET\universitet_mikl_30112024 EntityFramework пример\universitet_mikl\bin\Debug\net9.0\universitet_mikl.deps.json
+E:\обучение программированию\обучение SQL\EducationSQL\ADO.NET\universitet_mikl_30112024 EntityFramework пример\universitet_mikl\bin\Debug\net9.0\universitet_mikl.runtimeconfig.json
+E:\обучение программированию\обучение SQL\EducationSQL\ADO.NET\universitet_mikl_30112024 EntityFramework пример\universitet_mikl\bin\Debug\net9.0\universitet_mikl.dll
+E:\обучение программированию\обучение SQL\EducationSQL\ADO.NET\universitet_mikl_30112024 EntityFramework пример\universitet_mikl\bin\Debug\net9.0\universitet_mikl.pdb
+E:\обучение программированию\обучение SQL\EducationSQL\ADO.NET\universitet_mikl_30112024 EntityFramework пример\universitet_mikl\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.dll
+E:\обучение программированию\обучение SQL\EducationSQL\ADO.NET\universitet_mikl_30112024 EntityFramework пример\universitet_mikl\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+E:\обучение программированию\обучение SQL\EducationSQL\ADO.NET\universitet_mikl_30112024 EntityFramework пример\universitet_mikl\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Relational.dll
+E:\обучение программированию\обучение SQL\EducationSQL\ADO.NET\universitet_mikl_30112024 EntityFramework пример\universitet_mikl\bin\Debug\net9.0\Microsoft.Extensions.Caching.Abstractions.dll
+E:\обучение программированию\обучение SQL\EducationSQL\ADO.NET\universitet_mikl_30112024 EntityFramework пример\universitet_mikl\bin\Debug\net9.0\Microsoft.Extensions.Caching.Memory.dll
+E:\обучение программированию\обучение SQL\EducationSQL\ADO.NET\universitet_mikl_30112024 EntityFramework пример\universitet_mikl\bin\Debug\net9.0\Microsoft.Extensions.Configuration.Abstractions.dll
+E:\обучение программированию\обучение SQL\EducationSQL\ADO.NET\universitet_mikl_30112024 EntityFramework пример\universitet_mikl\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.dll
+E:\обучение программированию\обучение SQL\EducationSQL\ADO.NET\universitet_mikl_30112024 EntityFramework пример\universitet_mikl\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+E:\обучение программированию\обучение SQL\EducationSQL\ADO.NET\universitet_mikl_30112024 EntityFramework пример\universitet_mikl\bin\Debug\net9.0\Microsoft.Extensions.Logging.dll
+E:\обучение программированию\обучение SQL\EducationSQL\ADO.NET\universitet_mikl_30112024 EntityFramework пример\universitet_mikl\bin\Debug\net9.0\Microsoft.Extensions.Logging.Abstractions.dll
+E:\обучение программированию\обучение SQL\EducationSQL\ADO.NET\universitet_mikl_30112024 EntityFramework пример\universitet_mikl\bin\Debug\net9.0\Microsoft.Extensions.Options.dll
+E:\обучение программированию\обучение SQL\EducationSQL\ADO.NET\universitet_mikl_30112024 EntityFramework пример\universitet_mikl\bin\Debug\net9.0\Microsoft.Extensions.Primitives.dll
+E:\обучение программированию\обучение SQL\EducationSQL\ADO.NET\universitet_mikl_30112024 EntityFramework пример\universitet_mikl\bin\Debug\net9.0\Npgsql.dll
+E:\обучение программированию\обучение SQL\EducationSQL\ADO.NET\universitet_mikl_30112024 EntityFramework пример\universitet_mikl\bin\Debug\net9.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+E:\обучение программированию\обучение SQL\EducationSQL\ADO.NET\universitet_mikl_30112024 EntityFramework пример\universitet_mikl\obj\Debug\net9.0\universitet_mikl.csproj.AssemblyReference.cache
+E:\обучение программированию\обучение SQL\EducationSQL\ADO.NET\universitet_mikl_30112024 EntityFramework пример\universitet_mikl\obj\Debug\net9.0\universitet_mikl.GeneratedMSBuildEditorConfig.editorconfig
+E:\обучение программированию\обучение SQL\EducationSQL\ADO.NET\universitet_mikl_30112024 EntityFramework пример\universitet_mikl\obj\Debug\net9.0\universitet_mikl.AssemblyInfoInputs.cache
+E:\обучение программированию\обучение SQL\EducationSQL\ADO.NET\universitet_mikl_30112024 EntityFramework пример\universitet_mikl\obj\Debug\net9.0\universitet_mikl.AssemblyInfo.cs
+E:\обучение программированию\обучение SQL\EducationSQL\ADO.NET\universitet_mikl_30112024 EntityFramework пример\universitet_mikl\obj\Debug\net9.0\universitet_mikl.csproj.CoreCompileInputs.cache
+E:\обучение программированию\обучение SQL\EducationSQL\ADO.NET\universitet_mikl_30112024 EntityFramework пример\universitet_mikl\obj\Debug\net9.0\universitet_mikl.sourcelink.json
+E:\обучение программированию\обучение SQL\EducationSQL\ADO.NET\universitet_mikl_30112024 EntityFramework пример\universitet_mikl\obj\Debug\net9.0\universi.88ACCF66.Up2Date
+E:\обучение программированию\обучение SQL\EducationSQL\ADO.NET\universitet_mikl_30112024 EntityFramework пример\universitet_mikl\obj\Debug\net9.0\universitet_mikl.dll
+E:\обучение программированию\обучение SQL\EducationSQL\ADO.NET\universitet_mikl_30112024 EntityFramework пример\universitet_mikl\obj\Debug\net9.0\refint\universitet_mikl.dll
+E:\обучение программированию\обучение SQL\EducationSQL\ADO.NET\universitet_mikl_30112024 EntityFramework пример\universitet_mikl\obj\Debug\net9.0\universitet_mikl.pdb
+E:\обучение программированию\обучение SQL\EducationSQL\ADO.NET\universitet_mikl_30112024 EntityFramework пример\universitet_mikl\obj\Debug\net9.0\universitet_mikl.genruntimeconfig.cache
+E:\обучение программированию\обучение SQL\EducationSQL\ADO.NET\universitet_mikl_30112024 EntityFramework пример\universitet_mikl\obj\Debug\net9.0\ref\universitet_mikl.dll

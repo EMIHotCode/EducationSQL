@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("universitet_mikl")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e809ada38f5893062669f9497497568e3783dc4a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d6b272ed50d51b8e1aec38820b656055a5f53787")]
 [assembly: System.Reflection.AssemblyProductAttribute("universitet_mikl")]
 [assembly: System.Reflection.AssemblyTitleAttribute("universitet_mikl")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

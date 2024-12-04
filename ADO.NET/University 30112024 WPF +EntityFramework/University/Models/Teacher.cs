@@ -10,7 +10,7 @@ public class Teacher
     public string LastName { get; set; }
     public string FirstName { get; set; }
     
-    [NotMapped]
+    [NotMapped]  //анотация для игнорирования FullName это свойство будет игнорироваться в базе данных и использоваться для представления окне программы
     public string FullName => $"{LastName} {FirstName}";
 
     public Guid FacultyId { get; set; }

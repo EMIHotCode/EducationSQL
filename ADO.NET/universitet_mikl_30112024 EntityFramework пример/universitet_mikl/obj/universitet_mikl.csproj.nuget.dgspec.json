@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\share\\обучение программированию\\SQL lessons\\SQLrepository\\ADO.NET\\universitet_mikl\\universitet_mikl\\universitet_mikl.csproj": {}
+    "E:\\обучение программированию\\обучение SQL\\EducationSQL\\ADO.NET\\universitet_mikl_30112024 EntityFramework пример\\universitet_mikl\\universitet_mikl.csproj": {}
   },
   "projects": {
-    "D:\\share\\обучение программированию\\SQL lessons\\SQLrepository\\ADO.NET\\universitet_mikl\\universitet_mikl\\universitet_mikl.csproj": {
+    "E:\\обучение программированию\\обучение SQL\\EducationSQL\\ADO.NET\\universitet_mikl_30112024 EntityFramework пример\\universitet_mikl\\universitet_mikl.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\share\\обучение программированию\\SQL lessons\\SQLrepository\\ADO.NET\\universitet_mikl\\universitet_mikl\\universitet_mikl.csproj",
+        "projectUniqueName": "E:\\обучение программированию\\обучение SQL\\EducationSQL\\ADO.NET\\universitet_mikl_30112024 EntityFramework пример\\universitet_mikl\\universitet_mikl.csproj",
         "projectName": "universitet_mikl",
-        "projectPath": "D:\\share\\обучение программированию\\SQL lessons\\SQLrepository\\ADO.NET\\universitet_mikl\\universitet_mikl\\universitet_mikl.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "D:\\share\\обучение программированию\\SQL lessons\\SQLrepository\\ADO.NET\\universitet_mikl\\universitet_mikl\\obj\\",
+        "projectPath": "E:\\обучение программированию\\обучение SQL\\EducationSQL\\ADO.NET\\universitet_mikl_30112024 EntityFramework пример\\universitet_mikl\\universitet_mikl.csproj",
+        "packagesPath": "C:\\Users\\Mr User\\.nuget\\packages\\",
+        "outputPath": "E:\\обучение программированию\\обучение SQL\\EducationSQL\\ADO.NET\\universitet_mikl_30112024 EntityFramework пример\\universitet_mikl\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Mr User\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
