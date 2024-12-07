@@ -1,0 +1,11 @@
+﻿<Application x:Class="University.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:sys="clr-namespace:System;assembly=mscorelib"
+             
+             StartupUri="/Views/MainWindow.xaml">
+    <Application.Resources> <!-- создаем ресурс содержащий строку подключения  -->
+         <sys:String x:Key="ConnectionString"/>
+    </Application.Resources>
+    <!-- App.xaml.cs считывает конфиг и устанавливает строку подключения  -->
+</Application>

@@ -1,0 +1,29 @@
+Добавлен файл .gitignore - разобратся со внутреностями этого файла очень полезно
+текст для .gitignore взят с сайта  https://www.toptal.com/developers/gitignore/api/csharp
+
+Показали как запустить приложение из ссылки на GitHub репозитория
+Jetbrains rider запуск приложения из репозитория  Open\Get from Version Control - там указать ссылку на git репозиторий
+
+Замена строки подключения Entity Framework на файл подключения Json используя расширение Microsoft.Extensions.Configuration.Json
+ Entity Framework\ Файл конфигурации \appsettings.json  подключение без указания строки подключения за место нее файл Json
+Microsoft.Extensions.Configuration.Json  нужно это расширение для 
+https://metanit.com/sharp/entityframeworkcore/2.2.php
+
+Строка подключения из App.xaml.cs попадает в MainWindowViewModel.cs  и далее в DataBaseContext.cs по ниспадающей
+
+<!-- App.xaml создаем ресурс содержащий строку подключения  -->
+App.xaml.cs считывает конфиг и устанавливает строку подключения 
+
+Правильное написание строк подключения для разных баз данных https://www.connectionstrings.com/
+
+Добавлено меню в приложении с реализацией нажатия комбинации клавиш Ctrl+S  - это реализовано в MainWindow.xaml
+
+Реализация всех комманд RelayCommand
+
+Поле Id во view должно быть только для чтения чтобы невозможно было его менять
+Это делается следущим образом:
+InputControl.xaml у TextBox прописываем свойство IsReadOnly="{Binding IsReadOnly, Mode=OneWay}
+Переходим  в InputControl.xaml.cs  создаем IsReadOnlyProperty, свойство для него и регистрируем это свойство
+В MainWindow.xaml  InputControl Label="ID" можно тепер назначить свойство  IsReadOnly="True"
+
+
