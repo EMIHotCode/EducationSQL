@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\обучение программированию\\обучение SQL\\SQLrepository\\ADO.NET\\PhoneBook\\PhoneBook\\PhoneBook.csproj": {}
+    "E:\\обучение программированию\\обучение SQL\\EducationSQL\\ADO.NET\\PhoneBook\\PhoneBook\\PhoneBook.csproj": {}
   },
   "projects": {
-    "E:\\обучение программированию\\обучение SQL\\SQLrepository\\ADO.NET\\PhoneBook\\PhoneBook\\PhoneBook.csproj": {
+    "E:\\обучение программированию\\обучение SQL\\EducationSQL\\ADO.NET\\PhoneBook\\PhoneBook\\PhoneBook.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\обучение программированию\\обучение SQL\\SQLrepository\\ADO.NET\\PhoneBook\\PhoneBook\\PhoneBook.csproj",
+        "projectUniqueName": "E:\\обучение программированию\\обучение SQL\\EducationSQL\\ADO.NET\\PhoneBook\\PhoneBook\\PhoneBook.csproj",
         "projectName": "PhoneBook",
-        "projectPath": "E:\\обучение программированию\\обучение SQL\\SQLrepository\\ADO.NET\\PhoneBook\\PhoneBook\\PhoneBook.csproj",
+        "projectPath": "E:\\обучение программированию\\обучение SQL\\EducationSQL\\ADO.NET\\PhoneBook\\PhoneBook\\PhoneBook.csproj",
         "packagesPath": "C:\\Users\\Mr User\\.nuget\\packages\\",
-        "outputPath": "E:\\обучение программированию\\обучение SQL\\SQLrepository\\ADO.NET\\PhoneBook\\PhoneBook\\obj\\",
+        "outputPath": "E:\\обучение программированию\\обучение SQL\\EducationSQL\\ADO.NET\\PhoneBook\\PhoneBook\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -43,7 +43,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "all"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0-windows7.0": {
